@@ -30,6 +30,7 @@ class Admin_Menu_Handler {
     public function register_settings() {
         register_setting('whatsapp_settings_group', 'whatsapp_number');
         register_setting('whatsapp_settings_group', 'phone_number');
+        register_setting('whatsapp_settings_group', 'page_id');
     }
 
     public function render_settings_page() {
@@ -55,6 +56,18 @@ class Admin_Menu_Handler {
                             <input type="text" name="phone_number" value="<?php echo esc_attr(get_option('phone_number')); ?>" class="regular-text">
                         </td>
                     </tr>
+                    <tr>
+                    <th scope="row">Halaman Form</th>
+                    <td>
+                        <select name="page_id">
+                            <?php 
+                            $pages = get_pages();
+                            foreach ($pages as $page) : ?>
+                                <option value="<?php echo esc_attr($page->ID); ?>" <?php selected(get_option('page_id'), $page->ID); ?>><?php echo esc_html($page->post_title); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </td>
+                </tr>
                 </table>
                 <?php submit_button(); ?>
             </form>

@@ -1,0 +1,8 @@
+.floating-contact {
+  position: fixed;
+  top: 0px;
+  z-index: 999999;
+  padding: 10px;
+  background-color: #e5e5e5;
+  width: 100%;
+}
