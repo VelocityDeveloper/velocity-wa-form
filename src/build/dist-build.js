@@ -51,11 +51,6 @@ async function buildAndZip() {
   del("./dist").then(async () => {
     console.log("./dist is deleted!");
     copyDir("./", "./dist/velocity-wa-form/velocity-wa-form").then(async () => {
-      // Set the desired line ending, e.g., "\n" for LF
-      await setLineEndings(
-        "./dist/velocity-wa-form/velocity-wa-form/js/theme.js",
-        "\n"
-      );
       zipdir("./dist/velocity-wa-form", {
         saveTo: "./dist/velocity-wa-form.zip",
       });
