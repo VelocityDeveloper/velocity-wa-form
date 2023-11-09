@@ -30,3 +30,8 @@ if (!defined('WPINC')) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define('VELOCITY_WA_FORM_VERSION', '1.0.1');
+
+
+require_once plugin_dir_path(__FILE__) . 'inc/class-asset-handler.php';
+require_once plugin_dir_path(__FILE__) . 'inc/class-shortcode-handler.php';
+require_once plugin_dir_path(__FILE__) . 'inc/class-admin-menu-handler.php';

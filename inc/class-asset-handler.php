@@ -19,3 +19,5 @@ class Asset_Handler {
         wp_enqueue_script('custom-script', plugin_dir_url(__FILE__) . '../assets/script.js', array('jquery'), '1.0', true);
     }
 }
+
+$form_asset_handler = new Asset_Handler();
