@@ -39,6 +39,9 @@ class Admin_Menu_Handler {
             <form method="post" action="options.php">
                 <?php settings_fields('whatsapp_settings_group'); ?>
                 <?php do_settings_sections('whatsapp_settings_group'); ?>
+                <div>
+                    Tampilkan shortcode form dengan shortcode [wa-form]
+                </div>
                 <table class="form-table">
                     <tr>
                         <th scope="row">Nomor WhatsApp</th>
